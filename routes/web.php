@@ -20,4 +20,5 @@ use App\Models\Image;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/image', [ImageController::class,'index']);
+Route::get('/image', 'App\Http\Controllers\ImageController@index');
+Route::post('/addform', 'App\Http\Controllers\ImageController@store')->name('addform');

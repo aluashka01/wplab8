@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ index }}">
+<html >
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +37,7 @@ margin-top:2%;
 <div class="row">
 <div class="col-md-3"></div>
 <div class="col-md-6">
-<form action="/multiuploads" method="post" enctype="multipart/form-data">
+<form action="{{ route('addform') }}" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}
 <div class="form-group">
 <label for=" Name"> Name</label>
@@ -51,7 +51,7 @@ margin-top:2%;
 </div>
 <label for="Name"> photos (can attach more than one):</label>
 <br />
-<input type="file" class="form-control" name="photos[]" multiple />
+<input type="file" class="form-control" name="image"  />
 <br /><br />
 <input type="submit" class="btn btn-primary" value="Upload" />
 </form>
